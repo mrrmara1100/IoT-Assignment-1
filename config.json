@@ -1,0 +1,57 @@
+{
+    "camera": {
+        "source": 0,
+        "width": 1280,
+        "height": 720,
+        "backend": "auto",
+        "mirror": true,
+        "rotate": 0
+    },
+    "display": {
+        "width": 960
+    },
+    "processing": {
+        "width": 640
+    },
+    "features": {
+        "face": false,
+        "gestures": false,
+        "posture": false,
+        "fingers": true
+    },
+    "popups": {
+        "mode": "window",
+        "size": 360,
+        "hold_seconds": 0.5,
+        "show_seconds": 3.0,
+        "cooldown_seconds": 4.0,
+        "repeat_while_held": true
+    },
+    "face": {
+        "num_faces": 1,
+        "thresholds": {
+            "smile": 0.6,
+            "surprise_jaw": 0.4,
+            "surprise_brow": 0.4,
+            "kiss": 0.6,
+            "wink_closed": 0.6,
+            "wink_open": 0.35,
+            "angry": 0.6,
+            "sad": 0.35
+        },
+        "head": {
+            "turn_degrees": 25,
+            "nod_degrees": 18,
+            "tilt_degrees": 20
+        }
+    },
+    "gestures": {
+        "min_score": 0.6
+    },
+    "posture": {
+        "match_threshold": 0.88,
+        "min_segments": 4,
+        "min_visibility": 0.5,
+        "allow_mirrored": true
+    }
+}
