@@ -6,6 +6,8 @@ webcam, an **ESP32-CAM** over Wi‑Fi, or a DJI Osmo Pocket 3 over USB.
 The program finds up to two hands in each camera image, draws the hand skeleton, and shows how
 many fingers are raised on each hand (0–5), with a Left/Right label.
 
+This Project was initially focused on creating a finger counting computer vision by using **ESP32 Camera** to act as camera. However, the computer vision nature sparked a great ambition to make more than just a finger counting system. We added a few unnecessary features, which we will complete later. Those feature we will brief about in content 1. While there are 12 contents, the main course is content 3. We encourage that you stop by there. Other parts are mostly about features on top the required one, and some troubles we went through while figuring out how to buld this.
+
 **Contents**
 
 1. [Features and status](#1-features-and-status)
@@ -126,6 +128,15 @@ The ESP32-CAM (AI Thinker) only sends pictures over Wi‑Fi; the laptop does the
    ```
    python main.py --source http://192.168.1.15:81/stream --rotate 180
    ```
+4. We have fixed the rotation issue. Now the camera starts normally.
+   `The new code`:
+   ```
+   python main.py --source http://192.168.1.15:81/stream
+   ```
+
+**Note: The IP address here is not constant. It will change later on when you run program while connecting to a different networt.**
+
+**:81/stream remains the same. Change the address indside '192.168.1.15'**
 
 The top-right corner shows the board's address, picture size and frames per second. If pictures
 stop, the last one stays on screen with a "Camera slow" or "Connection lost – reconnecting"
@@ -135,6 +146,12 @@ To avoid typing the options every time, set them in `config.json`:
 `"source": "http://192.168.1.15:81/stream"` and `"rotate": 180`.
 
 ---
+
+### 3.4 Evidence - Video Demonstration
+This is the evidence video.
+
+**[Watch the full demonstration on YouTue](https://youtu.be/quzxL0w6qAw)**
+
 
 ## 4. Using the DJI Osmo Pocket 3
 

@@ -1,15 +1,3 @@
-"""Pop-up GIFs and pictures for detected expressions, head directions, gestures and postures.
-
-Features report what they currently see every frame, e.g. {"expression": ("smile", "expressions/smile")}.
-A pop-up is shown only after the same thing has been seen for `hold_seconds` (no flicker),
-and the same pop-up is not repeated until `cooldown_seconds` have passed.
-
-Media lookup:
-    "expressions/smile"     -> a random file from media/expressions/smile/
-    "postures/warrior.jpg"  -> exactly that file
-If a folder is empty, a text card is shown instead, telling you where to put files.
-"""
-
 import glob
 import os
 import random
