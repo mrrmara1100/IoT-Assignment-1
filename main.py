@@ -1,18 +1,3 @@
-"""Expression & Posture Mirror - main program.
-
-Run:
-    python main.py                    use the camera set in config.json
-    python main.py --source 1         use camera number 1 (e.g. DJI Osmo Pocket 3)
-    python main.py --source http://192.168.1.50:81/stream    use an ESP32-CAM
-    python main.py --list-cameras     show which camera numbers are available
-    python main.py --rotate 180       turn the picture (for an upside-down ESP32-CAM)
-
-Keys (in the video window):
-    F  face on/off        G  gestures on/off    P  posture on/off
-    H  fingers on/off     C  capture posture    D  debug values
-    Q / Esc  quit
-"""
-
 import argparse
 import json
 import os

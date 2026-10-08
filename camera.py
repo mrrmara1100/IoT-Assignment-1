@@ -1,15 +1,3 @@
-"""Camera sources: laptop webcam, DJI Osmo Pocket 3 (USB webcam mode) or ESP32-CAM (Wi-Fi stream).
-
-A source is either a camera number (0, 1, ...) or a stream URL such as
-"http://192.168.1.50:81/stream". Frames are read on a background thread so the
-main loop always gets the newest frame instead of a growing backlog.
-
-ESP32-CAM streams (http://...) are read by a small built-in reader instead of
-OpenCV's, because OpenCV handles the ESP32's frequent Wi-Fi drop-outs badly
-("Stream ends prematurely"). The built-in reader skips broken pictures and
-reconnects within about a second.
-"""
-
 import threading
 import time
 import urllib.request
